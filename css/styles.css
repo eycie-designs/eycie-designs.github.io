@@ -1,110 +1,199 @@
+/* Apply box-sizing to all elements for consistent sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Set the background color for the entire body */
 body {
-  background-color: pink;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-    border: 5px solid purple;
     background-color: white;
-    font-weight: bolder;
 }
 
-.container {
-    position: relative;
-    min-height: 100vh;
-    background: pink;
-}
-
-.container h2 {
-    font-size: 40px;
-    font-family: Verdana, Geneva, Tahoma, Sans-Serif;
-    font-weight: normal;
-    padding: 15px;
-    color: #333;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.container .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+/* Style for the header container */
+.header-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center vertically */
     justify-content: center;
-    padding: 10px;
+    background-color: #333; /* Dark background color */
+    padding: 10px; /* Padding around the header */
 }
+
+/* Style for the buttons */
+.button {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+/* Style for the favicon */
+.favicon {
+    max-width: 30px; /* Adjust the size of the favicon */
+    margin-right: 10px; /* Margin to the right of the favicon */
+}
+
+/* Style for the header image */
+.header-image {
+    text-align: center; /* Center-align text within the header */
+}
+
+.header-image img {
+    max-width: 100%; /* Ensure the image resizes proportionally */
+    height: auto;
+}
+
+/* Center-align paragraphs within the body */
+body p {
+    text-align: center;
+}
+
+/* Style for the main heading (h1) */
+h1 {
+    display: flex; /* Use flexbox for layout */
+    margin-top: 5px; /* Margin space on top of the heading */
+    justify-content: center; /* Center the heading horizontally */
+    font-weight: bolder; /* Make the text bold */
+}
+
+/* Style for links within h3 elements */
+h3 a {
+    margin: 10px; /* Margin around the links */
+}
+
+/* Style for the landing image container */
+.landing-image {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style for the individual images */
+.landing-image img {
+    max-width: 40%; /* Adjust the size of the images as needed */
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3); /* Box shadow for images */
+    border-radius: 23px;
+}
+
+/* Style for image descriptions */
+.description {
+    width: 60%; /* Adjust the width of the descriptions as needed */
+    margin-top: 20px;
+}
+
+/* Style for a container element */
+.container {
+    position: relative; /* Positioning context for child elements */
+    min-height: 100vh; /* Minimum height of the container */
+    background: white; /* Background color */
+}
+
+/* Style for headings within the container */
+.container h2 {
+    font-size: 40px; /* Font size */
+    font-family: Verdana, Geneva, Tahoma, Sans-Serif; /* Font family */
+    font-weight: normal; /* Normal font weight */
+    padding: 15px; /* Padding around headings */
+    color: #333; /* Text color */
+    text-align: center; /* Center-align headings */
+    text-transform: capitalize; /* Capitalize text */
+}
+
+/* Style for image containers within the container */
+.container .image-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    gap: 15px; /* Gap between images */
+    justify-content: center; /* Center-align images horizontally */
+    padding: 10px; /* Padding around the image container */
+}
+
+/* Style for individual images within the image container */
 .container .image-container .image {
-    height: 250px;
-    width: 350px;
-    border: 10px solid white;
-    box-shadow: 0 5 px 15px rgba(0,0,0,.1);
-    overflow: hidden;
-    cursor: pointer;
+    height: 250px; /* Fixed height for images */
+    width: 350px; /* Fixed width for images */
+    border: 10px solid white; /* White border around images */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3); /* Box shadow for images */
+    overflow: hidden; /* Hide overflow content */
+    cursor: pointer; /* Change cursor on hover */
+    border-radius: 10px;
 }
 
+/* Style for images within the individual image container */
 .container .image-container .image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: .2s linear;
+    height: 100%; /* Fill the entire image container */
+    width: 100%; /* Fill the entire image container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    transition: .2s linear; /* Smooth transition on hover */
 }
 
+/* Hover effect for images within the individual image container */
 .container .image-container .image:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slightly enlarge images on hover */
 }
 
+/* Style for the popup image */
 .container .popup-image {
-    position: fixed;
+    position: fixed; /* Fixed position for the popup */
     top: 0;
     left: 0;
-    background: rgba(0,0,0,.9);
+    background: rgba(0, 0, 0, .9); /* Semi-transparent background */
     height: 100%;
     width: 100%;
-    z-index: 100;
-    display: none;
+    z-index: 100; /* High z-index to overlay other content */
+    display: none; /* Initially hidden */
+    border-radius: 10px;
 }
 
+/* Style for the close button within the popup image */
 .container .popup-image span {
-    position: absolute;
+    position: absolute; /* Absolute position for the close button */
     top: 0;
     right: 10px;
-    font-size: 50px;
-    font-weight: bolder;
-    color: white;
-    cursor: pointer;
-    z-index: 100;
+    font-size: 50px; /* Font size */
+    font-weight: bolder; /* Bold text */
+    color: white; /* Text color */
+    cursor: pointer; /* Change cursor on hover */
+    z-index: 100; /* High z-index to overlay other content */
 }
 
+/* Style for the popup image itself */
 .container .popup-image img {
-    position: absolute;
+    position: absolute; /* Absolute position for the image */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    border: 5px solid white;
-    border-radius: 5px;
-    width: 750px;
-    object-fit: cover;
+    transform: translate(-50%, -50%); /* Center the image */
+    border: 5px solid white; /* White border around the image */
+    border-radius: 5px; /* Rounded corners */
+    width: 750px; /* Fixed width for the popup image */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
+/* Responsive styling for the popup image on smaller screens */
 @media (max-width: 768px) {
     .container .popup-image img {
-        width: 95%;
+        width: 95%; /* Adjust width for smaller screens */
     }
 }
 
-.icon-title-container {
-    display: flex; /* Use flexbox to align icon and text horizontally */
-    align-items: center; /* Center vertically */
+.aboutme-header {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    gap: 15px; /* Gap between images */
+    justify-content: center; /* Center-align images horizontally */
+    padding: 10px; /* Padding around the image container */
 }
 
-.icon-title-container img {
-    width: 24px; /* Adjust the width of the icon as needed */
-    margin: 3px;
-    border: 1px solid white;
+.aboutme-header .aboutme-image {
+    height: 350px; /* Fixed height for images */
+    width: 350px; /* Fixed width for images */
+    border: 5px solid white; /* White border around images */
+    border-radius: 10%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3); /* Box shadow for images */
+    overflow: hidden; /* Hide overflow content */
+    margin-top: 10px;
+}
+
+.aboutme-header .aboutme-image img {
+    height: 100%; /* Fill the entire image container */
+    width: 100%; /* Fill the entire image container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
 }

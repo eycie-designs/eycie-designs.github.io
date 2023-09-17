@@ -1,9 +1,9 @@
 .loader {
-  position:fixed;
-  width:100vw;
-  height:100vh;
-  left:0;
-  top:0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
   background-color: gray;
   display: flex;
   align-items: center;

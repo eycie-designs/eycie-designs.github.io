@@ -22,6 +22,7 @@ body {
 /* Style for the buttons */
 .button {
     color: white; /* White text color */
+    margin: 10px;
     text-decoration: none; /* Remove underlines from links */
 }
 
@@ -55,7 +56,7 @@ h1 {
 }
 
 /* Style for links within h3 elements */
-h3 a {
+h4 a {
     margin: 10px; /* Margin around the links */
 }
 

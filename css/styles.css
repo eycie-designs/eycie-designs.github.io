@@ -7,7 +7,11 @@
 
 /* Set the background color for the entire body */
 body {
-    background-color: white;
+    background: white;
+}
+
+body #content {
+    display: none;
 }
 
 /* Style for the header container */
